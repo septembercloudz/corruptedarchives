@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corrupted Archives · Edição de vídeo com IA generativa</title>
+<meta name="description" content="Reels, TikTok e vídeos horizontais editados pra prender a atenção, com captação humana e efeitos de IA generativa. Campinas e remoto.">
+<meta name="theme-color" content="#0B0B0B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Corrupted Archives · Edição de vídeo com IA generativa">
+<meta property="og:description" content="Reels, TikTok e vídeos horizontais editados pra prender a atenção, com captação humana e efeitos de IA generativa. Campinas e remoto.">
+<meta property="og:image" content="assets/showreel-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0B0B'/%3E%3Crect x='8' y='8' width='14' height='16' fill='%23F2F0EA'/%3E%3Crect x='22' y='8' width='3' height='16' fill='%233BF4FB'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700;800;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0B0B0B}
+a{color:inherit}a:hover{opacity:.85}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:.02em}
+.glitch{position:relative;display:inline-block;color:#F2F0EA;background:repeating-linear-gradient(180deg,#F2F0EA 0 2px,#7E7D78 2px 3px);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:url(#tvnoise);animation:tv-flicker 4s infinite steps(1)}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;left:0;top:0;width:100%;background:none;pointer-events:none}
+.glitch::before{color:#FFFFFF;-webkit-text-fill-color:#FFFFFF;opacity:.9;animation:tv-slice-a 2.6s infinite steps(1)}
+.glitch::after{color:#55544F;-webkit-text-fill-color:#55544F;animation:tv-slice-b 1.8s infinite steps(1)}
+@keyframes tv-slice-a{0%{clip-path:inset(12% 0 72% 0);transform:translateX(-4px)}18%{clip-path:inset(48% 0 38% 0);transform:translateX(5px)}36%{clip-path:inset(82% 0 4% 0);transform:translateX(-2px)}54%{clip-path:inset(100% 0 0 0);transform:none}78%{clip-path:inset(28% 0 60% 0);transform:translateX(7px)}90%{clip-path:inset(100% 0 0 0);transform:none}}
+@keyframes tv-slice-b{0%{clip-path:inset(62% 0 20% 0);transform:translateX(4px)}25%{clip-path:inset(100% 0 0 0);transform:none}50%{clip-path:inset(5% 0 85% 0);transform:translateX(-6px)}70%{clip-path:inset(40% 0 45% 0);transform:translateX(3px)}85%{clip-path:inset(100% 0 0 0);transform:none}}
+@keyframes tv-flicker{0%{opacity:1}91%{opacity:1}92%{opacity:.55}93%{opacity:1}96%{opacity:.8}97%{opacity:1}}
+.tv-layer{position:absolute;inset:0;pointer-events:none}
+.tv-static{opacity:.42;z-index:0;animation:tv-flicker 3.2s infinite steps(1)}
+.tv-static svg{display:block}
+.tv-lines{z-index:1;background:repeating-linear-gradient(180deg,rgba(0,0,0,.5) 0 2px,transparent 2px 4px)}
+.tv-tear{z-index:1;background:linear-gradient(180deg,transparent 0,transparent 30%,rgba(255,255,255,.18) 30%,rgba(255,255,255,.18) 31.5%,transparent 31.5%,transparent 70%,rgba(255,255,255,.12) 70%,rgba(255,255,255,.12) 70.8%,transparent 70.8%);animation:tv-tear 2.2s infinite steps(1)}
+.tv-roll{z-index:1;top:-30%;height:30%;background:linear-gradient(180deg,transparent,rgba(255,255,255,.07) 45%,rgba(255,255,255,.12) 50%,rgba(255,255,255,.07) 55%,transparent);animation:tv-roll 5s linear infinite}
+.tv-vignette{z-index:1;background:radial-gradient(ellipse at center,transparent 35%,rgba(0,0,0,.85) 100%)}
+@keyframes tv-tear{0%{transform:translate(0,0);opacity:1}15%{transform:translate(-12px,40px);opacity:.6}30%{transform:translate(8px,-60px);opacity:0}55%{transform:translate(0,90px);opacity:.9}70%{transform:translate(-6px,-20px);opacity:0}85%{transform:translate(14px,10px);opacity:.7}}
+@keyframes tv-roll{0%{transform:translateY(0)}100%{transform:translateY(470%)}}
+.cta-btn{position:relative;transition:transform .25s ease,box-shadow .25s ease;animation:cta-pulse 2.4s ease-out infinite}
+.cta-btn .cta-text{display:inline-block;animation:cta-glitch 4s infinite steps(1)}
+.cta-btn .cta-arrow{display:inline-block;transition:transform .25s ease;animation:cta-nudge 2.4s ease-in-out infinite}
+.cta-btn:hover,.cta-btn:focus-visible{opacity:1;animation:none;transform:scale(1.04);box-shadow:0 0 0 6px rgba(59,244,251,.45),0 0 48px rgba(255,46,136,.45)}
+.cta-btn:focus-visible{outline:2px solid #3BF4FB;outline-offset:8px}
+.cta-btn:hover .cta-text,.cta-btn:focus-visible .cta-text{animation:cta-glitch-fast .4s infinite steps(1)}
+.cta-btn:hover .cta-arrow,.cta-btn:focus-visible .cta-arrow{animation:none;transform:translateX(10px)}
+@keyframes cta-pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.55)}70%{box-shadow:0 0 0 22px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+@keyframes cta-nudge{0%,60%,100%{transform:translateX(0)}70%{transform:translateX(8px)}80%{transform:translateX(0)}88%{transform:translateX(5px)}}
+@keyframes cta-glitch{0%{text-shadow:none;transform:none}88%{text-shadow:none;transform:none}89%{text-shadow:-3px 0 #3BF4FB,3px 0 #FF2E88;transform:translateX(2px)}91%{text-shadow:2px 0 #3BF4FB,-2px 0 #FF2E88;transform:translateX(-2px)}93%{text-shadow:none;transform:none}}
+@keyframes cta-glitch-fast{0%{text-shadow:-3px 0 #3BF4FB,3px 0 #FF2E88;transform:translateX(1px)}33%{text-shadow:2px 0 #3BF4FB,-2px 0 #FF2E88;transform:translateX(-1px)}66%{text-shadow:none;transform:none}}
+.uni-row{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.uni-track{display:flex;gap:16px;width:max-content;animation:uni-scroll 72s linear infinite}
+.uni-reverse{animation-direction:reverse;animation-duration:70s}
+.uni-row:hover .uni-track{animation-play-state:paused}
+.uni-tile{flex:0 0 220px;aspect-ratio:4/3;box-sizing:border-box;padding:14px;border-radius:10px;border:1px solid #262626;background-color:#161616;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s ease,transform .2s ease}
+.uni-tile:hover{border-color:#5A5A5A;transform:translateY(-3px)}
+.uni-tile.has-media{position:relative;overflow:hidden;background-image:none;padding:0}
+.uni-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.uni-tile.has-media::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,11,11,.55) 0%,rgba(11,11,11,0) 35%,rgba(11,11,11,0) 55%,rgba(11,11,11,.8) 100%);pointer-events:none}
+.uni-tile.has-media .uni-tag,.uni-tile.has-media .uni-title{position:relative;z-index:2;padding:12px 14px}
+.uni-tile.has-media .uni-title{text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.fmt-row{display:grid;grid-template-columns:1.778fr 1fr .8fr .5625fr;gap:24px;align-items:start;margin-top:64px}
+.fmt-item{min-width:0}
+.fmt-frame{position:relative;width:100%;box-sizing:border-box;border-radius:10px;border:1px solid #2A2A2A;background-color:#151515;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .25s ease,transform .25s ease}
+.fmt-item:hover .fmt-frame{border-color:#4A4A4A;transform:translateY(-4px)}
+.fmt-c{position:absolute;width:14px;height:14px;border-color:#5A5A55;border-style:solid;border-width:0}
+.fmt-tl{top:10px;left:10px;border-top-width:1.5px;border-left-width:1.5px}
+.fmt-tr{top:10px;right:10px;border-top-width:1.5px;border-right-width:1.5px}
+.fmt-bl{bottom:10px;left:10px;border-bottom-width:1.5px;border-left-width:1.5px}
+.fmt-br{bottom:10px;right:10px;border-bottom-width:1.5px;border-right-width:1.5px}
+.fmt-rec{position:absolute;top:12px;left:30px;font-size:10px;color:#A5A39C;display:flex;align-items:center;gap:5px}
+.fmt-rec b{width:6px;height:6px;border-radius:50%;background:#FF2E88;animation:fmt-blink 1.6s steps(1) infinite}
+@keyframes fmt-blink{0%{opacity:1}50%{opacity:.2}}
+.fmt-ph{font-size:11px;color:#8A8A85;text-align:center;padding:0 12px}
+.fmt-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.fmt-c,.fmt-rec{z-index:2}
+.fmt-c{border-color:rgba(242,240,234,.75)!important}
+.fmt-rec{color:#F2F0EA!important;text-shadow:0 1px 4px rgba(0,0,0,.6)}
+.fmt-meta{margin-top:16px}
+@media (max-width:900px){.fmt-row{gap:12px}.fmt-rec{display:none}.fmt-ph{font-size:9px}.fmt-meta p{font-size:12px!important}.fmt-meta p+p{display:none}}
+@media (prefers-reduced-motion: reduce){.fmt-rec b{animation:none}}
+.uni-tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.02em}
+.uni-title{font-size:15px;font-weight:500;line-height:1.3;color:#F2F0EA}
+@keyframes uni-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 8px))}}
+@media (prefers-reduced-motion: reduce){.uni-track{animation:none;flex-wrap:wrap;width:auto;padding:0 24px}.uni-track [aria-hidden="true"]{display:none}.uni-row{-webkit-mask-image:none;mask-image:none}}
+@media (prefers-reduced-motion: reduce){.cta-btn,.cta-btn .cta-text,.cta-btn .cta-arrow{animation:none!important}.glitch,.glitch::before,.glitch::after{animation:none}.glitch::before,.glitch::after{clip-path:inset(100% 0 0 0)}.tv-static,.tv-tear,.tv-roll{animation:none}.tv-roll,.tv-tear{display:none}}
+.scan{background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 4px)}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&amp;display=swap">
+</head>
+<body>
+<div style="font-family: 'Unbounded', system-ui, sans-serif; color: #F2F0EA; background: #0B0B0B; width: 100%; overflow-x: hidden">
+<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false"><filter id="tvnoise" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3" result="n"><animate attributeName="seed" values="1;4;8;2;6;9;3" dur="0.6s" repeatCount="indefinite"></animate></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap><feColorMatrix in="n" type="saturate" values="0" result="g"></feColorMatrix><feComposite in="g" in2="d" operator="in" result="gm"></feComposite><feBlend in="d" in2="gm" mode="multiply"></feBlend></filter></svg>
+
+<!-- HERO (claro, como a referência) -->
+<section style="background: #0B0B0B; color: #F2F0EA">
+  <nav class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px">
+    <a href="#" class="mono" style="text-decoration: none; font-weight: 500; font-size: 14px; display: flex; align-items: center; gap: 10px">
+      <span style="display: inline-block; width: 22px; height: 22px; background: #F2F0EA; box-shadow: 3px 0 0 #3BF4FB"></span>
+      CORRUPTED/ARCHIVES
+    </a>
+    <div class="mono" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 13px">
+      <a href="#servicos" style="text-decoration: none">SERVIÇOS</a>
+      <a href="#formatos" style="text-decoration: none">FORMATOS</a>
+      <a href="#ia" style="text-decoration: none">LAB IA</a>
+      <a href="#pacotes" style="text-decoration: none">PACOTES</a>
+    </div>
+    <a href="https://wa.me/5519992994889?text=Oi%21%20Vim%20pela%20p%C3%A1gina%20e%20quero%20falar%20sobre%20um%20v%C3%ADdeo." target="_blank" rel="noopener" class="mono" style="text-decoration: none; font-size: 13px; padding: 12px 18px; min-height: 44px; box-sizing: border-box; border-radius: 999px; background: #F2F0EA; color: #0B0B0B; display: inline-flex; align-items: center">CHAMAR NO WHATSAPP</a>
+  </nav>
+
+  <div class="wrap" style="padding-top: 72px; padding-bottom: 56px; text-align: center">
+    <p class="mono" style="margin: 0 0 24px; font-size: 13px; color: #A5A39C">EDIÇÃO · CAPTAÇÃO · IA GENERATIVA</p>
+    <h1 style="margin: 0; font-weight: 900; font-size: clamp(34px, 9vw, 80px); line-height: .95; letter-spacing: -0.02em; text-transform: uppercase; max-width: 100%; font-family: 'Unbounded', sans-serif; min-height: 1.9em">Vídeos que<br><span class="glitch" data-text="ninguém pula">ninguém pula</span></h1>
+    <p style="margin: 32px auto 0; max-width: 620px; font-size: clamp(16px, 4.2vw, 20px); line-height: 1.5; color: #CFCDC6; min-height: 135px">Reels, TikTok e vídeos horizontais editados pra prender nos primeiros 3 segundos — com captação humana e efeitos de IA que seu concorrente ainda não tem.</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px">
+      <a href="https://wa.me/5519992994889?text=Oi%21%20Quero%20um%20or%C3%A7amento%20de%20v%C3%ADdeo." target="_blank" rel="noopener" class="mono" style="text-decoration: none; font-size: 14px; padding: 14px 24px; min-height: 48px; box-sizing: border-box; border-radius: 999px; background: #F2F0EA; color: #0B0B0B; display: inline-flex; align-items: center; gap: 10px">PEDIR ORÇAMENTO EM 1 MIN →</a>
+      <a href="#trabalhos" class="mono" style="text-decoration: none; font-size: 14px; padding: 14px 24px; min-height: 48px; box-sizing: border-box; border-radius: 999px; border: 1.5px solid #F2F0EA; display: inline-flex; align-items: center">VER TRABALHOS</a>
+    </div>
+  </div>
+
+  <!-- showreel -->
+  <div class="wrap" style="padding-bottom: 72px">
+    <div style="max-width: 980px; margin: 0 auto; background: #141414; border-radius: 10px; padding: 10px; border: 1px solid #2A2A2A; box-shadow: 0 30px 60px rgba(0,0,0,.5)">
+      <div class="mono" style="display: flex; justify-content: space-between; font-size: 11px; color: #8A8A85; padding: 4px 6px 10px">
+        <span>● ● ●   SHOWREEL_60s.mp4</span><span>00:01:00:00</span>
+      </div>
+      <video src="assets/showreel-web.mp4" poster="assets/showreel-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Showreel Corrupted Archives: trechos de trabalhos de edição" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background-color: #000; border-radius: 4px"></video>
+      <div style="display: flex; gap: 3px; margin-top: 10px; height: 34px">
+        <div style="flex: 3; background: #2E2E2E; border-radius: 3px"></div>
+        <div style="flex: 2; background: #3BF4FB; border-radius: 3px; opacity: .85"></div>
+        <div style="flex: 4; background: #2E2E2E; border-radius: 3px"></div>
+        <div style="flex: 1; background: #FF2E88; border-radius: 3px"></div>
+        <div style="flex: 3; background: #2E2E2E; border-radius: 3px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- universo de possibilidades: edição + IA -->
+
+
+<!-- faixa de clientes / formatos -->
+<section style="background: #0B0B0B; color: #F2F0EA; border-top: 1px solid #262626; border-bottom: 1px solid #262626">
+  <div class="wrap mono" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding-top: 28px; padding-bottom: 28px; font-size: 14px; color: #A5A39C"><span>JÁ EDITEI PARA →</span>
+    <span>EVENTO CULTURAL DE 8000 PESSOAS</span><span>CARLOS CAPSLOCK SÃO PAULO</span><span>MARCELO D2</span><span>FNR FESTIVAL</span><span>AGÊNCIAS DE CAMPINAS</span>
+  </div>
+</section>
+
+<!-- 01 VÍDEO CURTO -->
+<section id="servicos" style="padding: 120px 0 40px">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <div style="flex: 1 1 420px">
+      <p class="mono" style="margin: 0 0 16px; font-size: 13px; color: #3BF4FB">01 /</p>
+      <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); font-weight: 800; line-height: 1; letter-spacing: -0.02em">Vídeo curto</h2>
+    </div>
+    <div style="flex: 1 1 420px; padding-top: 34px">
+      <p style="margin: 0; font-size: 30px; line-height: 1.25">O formato que mais vende hoje. Editado pra parar o dedo.</p>
+      <p style="margin: 28px 0 0; font-size: 17px; line-height: 1.6; color: #B9B7B0">Reels, TikTok e Shorts com gancho forte, ritmo rápido, legenda animada e trilha certa. Você manda o material bruto (ou eu gravo), eu entrego pronto pra postar.</p>
+    </div>
+  </div>
+  <!-- carrossel vertical -->
+  <div id="trabalhos" style="display: flex; gap: 20px; justify-content: center; padding: 80px 24px 0; overflow-x: auto">
+    <video src="assets/reel-ia.mp4" poster="assets/reel-ia-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Reel com IA: Guia-se Agências Digitais, marketing imobiliário" style="flex: 0 0 200px; width: 200px; aspect-ratio: 9 / 16; object-fit: cover; background-color: #000; border-radius: 12px; display: block; opacity: .55"></video>
+    <video src="assets/reel-4.mp4" poster="assets/reel-4-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Reel: Nefasta" style="flex: 0 0 240px; width: 240px; aspect-ratio: 9 / 16; object-fit: cover; background-color: #000; border-radius: 12px; display: block"></video>
+    <video src="assets/reel-destaque.mp4" poster="assets/reel-destaque-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Reel em destaque: Interrompe o fluxo de dinheiro" style="flex: 0 0 280px; width: 280px; aspect-ratio: 9 / 16; object-fit: cover; background-color: #000; border-radius: 12px; display: block; outline: 2px solid #3BF4FB"></video>
+    <video src="assets/reel-16.mp4" poster="assets/reel-16-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Reel: Fogo na Roupa com Tasha e Tracie" style="flex: 0 0 240px; width: 240px; aspect-ratio: 9 / 16; object-fit: cover; background-color: #000; border-radius: 12px; display: block"></video>
+    <video src="assets/reel-chave.mp4" poster="assets/reel-chave-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Reel: A chave para prever vendas, podcast Guia-se" style="flex: 0 0 200px; width: 200px; aspect-ratio: 9 / 16; object-fit: cover; background-color: #000; border-radius: 12px; display: block; opacity: .55"></video>
+  </div>
+  <div style="text-align: center; padding: 56px 24px 0">
+    <a href="https://wa.me/5519992994889?text=Oi%21%20Quero%20Reels%20nesse%20estilo." target="_blank" rel="noopener" class="mono" style="text-decoration: none; font-size: 13px; padding: 12px 20px; min-height: 44px; box-sizing: border-box; border-radius: 999px; border: 1.5px solid #F2F0EA; display: inline-flex; align-items: center">QUERO REELS ASSIM →</a>
+  </div>
+</section>
+
+<section style="background: #0B0B0B; color: #F2F0EA; border-top: 1px solid #262626; border-bottom: 1px solid #262626; padding: 56px 0 64px; overflow: hidden">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 36px">
+    <div>
+      <p class="mono" style="margin: 0 0 12px; font-size: 13px; color: #A5A39C">EDIÇÃO + IA GENERATIVA →</p>
+      <h2 style="margin: 0; font-size: clamp(26px, 3.4vw, 44px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em">Se dá pra imaginar,<br>dá pra colocar no vídeo.</h2>
+    </div>
+    <p class="mono" style="margin: 0; max-width: 360px; font-size: 13px; line-height: 1.6; color: #A5A39C">Alguns exemplos do que entra num corte. Passe o mouse pra pausar.</p>
+  </div>
+
+  <div class="uni-row">
+    <div class="uni-track">
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-mundo.mp4" poster="assets/uni-mundo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: cidade nos penhascos vira cenário impossível"></video><span class="uni-tag" style="color: #3BF4FB">[ FANTASIA ]</span><span class="uni-title">Cenário que não existe</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-vida.mp4" poster="assets/uni-vida.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: tênis ganhando vida"></video><span class="uni-tag" style="color: #3BF4FB">[ VIDA ]</span><span class="uni-title">Produto ganhando vida</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-apaga.mp4" poster="assets/uni-apaga.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: plantas e postes somem da fachada"></video><span class="uni-tag" style="color: #3BF4FB">[ APAGA ]</span><span class="uni-title">Objeto que some da cena</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-tempo.mp4" poster="assets/uni-tempo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: terraço da cidade passa do dia para a noite"></video><span class="uni-tag" style="color: #3BF4FB">[ TEMPO ]</span><span class="uni-title">Dia que vira noite</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-ceu.mp4" poster="assets/uni-ceu.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: praia nublada vira pôr do sol com ilhas flutuando"></video><span class="uni-tag" style="color: #3BF4FB">[ CÉU ]</span><span class="uni-title">Céu nublado, pôr do sol no vídeo</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-voo.mp4" poster="assets/uni-voo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: câmera voa pela cozinha até o prato do chef"></video><span class="uni-tag" style="color: #3BF4FB">[ VOO ]</span><span class="uni-title">Câmera onde drone não entra</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-mundo.mp4" poster="assets/uni-mundo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: cidade nos penhascos vira cenário impossível"></video><span class="uni-tag" style="color: #3BF4FB">[ FANTASIA ]</span><span class="uni-title">Cenário que não existe</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-vida.mp4" poster="assets/uni-vida.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: tênis ganhando vida"></video><span class="uni-tag" style="color: #3BF4FB">[ VIDA ]</span><span class="uni-title">Produto ganhando vida</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-apaga.mp4" poster="assets/uni-apaga.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: plantas e postes somem da fachada"></video><span class="uni-tag" style="color: #3BF4FB">[ APAGA ]</span><span class="uni-title">Objeto que some da cena</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-tempo.mp4" poster="assets/uni-tempo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: terraço da cidade passa do dia para a noite"></video><span class="uni-tag" style="color: #3BF4FB">[ TEMPO ]</span><span class="uni-title">Dia que vira noite</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-ceu.mp4" poster="assets/uni-ceu.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: praia nublada vira pôr do sol com ilhas flutuando"></video><span class="uni-tag" style="color: #3BF4FB">[ CÉU ]</span><span class="uni-title">Céu nublado, pôr do sol no vídeo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-voo.mp4" poster="assets/uni-voo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: câmera voa pela cozinha até o prato do chef"></video><span class="uni-tag" style="color: #3BF4FB">[ VOO ]</span><span class="uni-title">Câmera onde drone não entra</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-mundo.mp4" poster="assets/uni-mundo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: cidade nos penhascos vira cenário impossível"></video><span class="uni-tag" style="color: #3BF4FB">[ FANTASIA ]</span><span class="uni-title">Cenário que não existe</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-vida.mp4" poster="assets/uni-vida.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: tênis ganhando vida"></video><span class="uni-tag" style="color: #3BF4FB">[ VIDA ]</span><span class="uni-title">Produto ganhando vida</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-apaga.mp4" poster="assets/uni-apaga.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: plantas e postes somem da fachada"></video><span class="uni-tag" style="color: #3BF4FB">[ APAGA ]</span><span class="uni-title">Objeto que some da cena</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-tempo.mp4" poster="assets/uni-tempo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: terraço da cidade passa do dia para a noite"></video><span class="uni-tag" style="color: #3BF4FB">[ TEMPO ]</span><span class="uni-title">Dia que vira noite</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-ceu.mp4" poster="assets/uni-ceu.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: praia nublada vira pôr do sol com ilhas flutuando"></video><span class="uni-tag" style="color: #3BF4FB">[ CÉU ]</span><span class="uni-title">Céu nublado, pôr do sol no vídeo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-voo.mp4" poster="assets/uni-voo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: câmera voa pela cozinha até o prato do chef"></video><span class="uni-tag" style="color: #3BF4FB">[ VOO ]</span><span class="uni-title">Câmera onde drone não entra</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-mundo.mp4" poster="assets/uni-mundo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: cidade nos penhascos vira cenário impossível"></video><span class="uni-tag" style="color: #3BF4FB">[ FANTASIA ]</span><span class="uni-title">Cenário que não existe</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-vida.mp4" poster="assets/uni-vida.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: tênis ganhando vida"></video><span class="uni-tag" style="color: #3BF4FB">[ VIDA ]</span><span class="uni-title">Produto ganhando vida</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-apaga.mp4" poster="assets/uni-apaga.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: plantas e postes somem da fachada"></video><span class="uni-tag" style="color: #3BF4FB">[ APAGA ]</span><span class="uni-title">Objeto que some da cena</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-tempo.mp4" poster="assets/uni-tempo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: terraço da cidade passa do dia para a noite"></video><span class="uni-tag" style="color: #3BF4FB">[ TEMPO ]</span><span class="uni-title">Dia que vira noite</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-ceu.mp4" poster="assets/uni-ceu.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: praia nublada vira pôr do sol com ilhas flutuando"></video><span class="uni-tag" style="color: #3BF4FB">[ CÉU ]</span><span class="uni-title">Céu nublado, pôr do sol no vídeo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-voo.mp4" poster="assets/uni-voo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: câmera voa pela cozinha até o prato do chef"></video><span class="uni-tag" style="color: #3BF4FB">[ VOO ]</span><span class="uni-title">Câmera onde drone não entra</span></div>
+    </div>
+  </div>
+
+  <div class="uni-row" style="margin-top: 16px">
+    <div class="uni-track uni-reverse">
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-viagem.mp4" poster="assets/uni-viagem.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: o estúdio de podcast vira uma praia de areia preta"></video><span class="uni-tag" style="color: #FF7AB8">[ VIAGEM ]</span><span class="uni-title">Você em qualquer lugar do mundo</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-logo.mp4" poster="assets/uni-logo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: logo vira escultura gigante numa praça ao pôr do sol"></video><span class="uni-tag" style="color: #FF7AB8">[ LOGO ]</span><span class="uni-title">Logo que vira cena</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-vintage.mp4" poster="assets/uni-vintage.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: foto moderna de palmeira ganha cara de filme antigo"></video><span class="uni-tag" style="color: #FF7AB8">[ VINTAGE ]</span><span class="uni-title">Clima de filme antigo</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-lento.mp4" poster="assets/uni-lento.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: drink azul servido com respingos em câmera lenta"></video><span class="uni-tag" style="color: #FF7AB8">[ LENTO ]</span><span class="uni-title">Câmera lenta que não foi gravada</span></div>
+      <div class="uni-tile has-media"><video class="uni-media" src="assets/uni-real.mp4" poster="assets/uni-real.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: desenho de menino de boné vira uma pessoa real"></video><span class="uni-tag" style="color: #FF7AB8">[ REAL ]</span><span class="uni-title">Desenho que vira gente de verdade</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-viagem.mp4" poster="assets/uni-viagem.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: o estúdio de podcast vira uma praia de areia preta"></video><span class="uni-tag" style="color: #FF7AB8">[ VIAGEM ]</span><span class="uni-title">Você em qualquer lugar do mundo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-logo.mp4" poster="assets/uni-logo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: logo vira escultura gigante numa praça ao pôr do sol"></video><span class="uni-tag" style="color: #FF7AB8">[ LOGO ]</span><span class="uni-title">Logo que vira cena</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-vintage.mp4" poster="assets/uni-vintage.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: foto moderna de palmeira ganha cara de filme antigo"></video><span class="uni-tag" style="color: #FF7AB8">[ VINTAGE ]</span><span class="uni-title">Clima de filme antigo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-lento.mp4" poster="assets/uni-lento.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: drink azul servido com respingos em câmera lenta"></video><span class="uni-tag" style="color: #FF7AB8">[ LENTO ]</span><span class="uni-title">Câmera lenta que não foi gravada</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-real.mp4" poster="assets/uni-real.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: desenho de menino de boné vira uma pessoa real"></video><span class="uni-tag" style="color: #FF7AB8">[ REAL ]</span><span class="uni-title">Desenho que vira gente de verdade</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-viagem.mp4" poster="assets/uni-viagem.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: o estúdio de podcast vira uma praia de areia preta"></video><span class="uni-tag" style="color: #FF7AB8">[ VIAGEM ]</span><span class="uni-title">Você em qualquer lugar do mundo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-logo.mp4" poster="assets/uni-logo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: logo vira escultura gigante numa praça ao pôr do sol"></video><span class="uni-tag" style="color: #FF7AB8">[ LOGO ]</span><span class="uni-title">Logo que vira cena</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-vintage.mp4" poster="assets/uni-vintage.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: foto moderna de palmeira ganha cara de filme antigo"></video><span class="uni-tag" style="color: #FF7AB8">[ VINTAGE ]</span><span class="uni-title">Clima de filme antigo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-lento.mp4" poster="assets/uni-lento.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: drink azul servido com respingos em câmera lenta"></video><span class="uni-tag" style="color: #FF7AB8">[ LENTO ]</span><span class="uni-title">Câmera lenta que não foi gravada</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-real.mp4" poster="assets/uni-real.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: desenho de menino de boné vira uma pessoa real"></video><span class="uni-tag" style="color: #FF7AB8">[ REAL ]</span><span class="uni-title">Desenho que vira gente de verdade</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-viagem.mp4" poster="assets/uni-viagem.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: o estúdio de podcast vira uma praia de areia preta"></video><span class="uni-tag" style="color: #FF7AB8">[ VIAGEM ]</span><span class="uni-title">Você em qualquer lugar do mundo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-logo.mp4" poster="assets/uni-logo.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: logo vira escultura gigante numa praça ao pôr do sol"></video><span class="uni-tag" style="color: #FF7AB8">[ LOGO ]</span><span class="uni-title">Logo que vira cena</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-vintage.mp4" poster="assets/uni-vintage.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: foto moderna de palmeira ganha cara de filme antigo"></video><span class="uni-tag" style="color: #FF7AB8">[ VINTAGE ]</span><span class="uni-title">Clima de filme antigo</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-lento.mp4" poster="assets/uni-lento.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: drink azul servido com respingos em câmera lenta"></video><span class="uni-tag" style="color: #FF7AB8">[ LENTO ]</span><span class="uni-title">Câmera lenta que não foi gravada</span></div>
+      <div class="uni-tile has-media" aria-hidden="true"><video class="uni-media" src="assets/uni-real.mp4" poster="assets/uni-real.jpg" autoplay muted loop playsinline preload="auto" aria-label="Exemplo: desenho de menino de boné vira uma pessoa real"></video><span class="uni-tag" style="color: #FF7AB8">[ REAL ]</span><span class="uni-title">Desenho que vira gente de verdade</span></div>
+    </div>
+  </div>
+</section><div class="wrap"><div style="height: 1px; background: #262626; margin: 100px 0 0"></div></div>
+
+<!-- Captação humana -->
+<section style="padding: 100px 0">
+  <div class="wrap" style="text-align: center">
+    <h3 style="margin: 0; font-size: clamp(34px, 4.5vw, 52px); font-weight: 700; display: inline-flex; align-items: center; gap: 14px">
+      <span style="display: inline-flex; width: 40px; height: 40px; border-radius: 8px; background: #3BF4FB; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="14" height="10" rx="2"></rect><path d="M16 11l6-3v8l-6-3"></path></svg></span>
+      Captação humana
+    </h3>
+    <p style="margin: 24px auto 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #B9B7B0">Vou até você e gravo o conteúdo orgânico: bastidores, depoimentos, produto, rotina. Gente de verdade, que gera confiança — e depois edito tudo.</p>
+    <video src="assets/captacao.mp4" poster="assets/captacao-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Captação humana: bastidor de serigrafia" style="display: block; width: 100%; max-width: 340px; margin: 48px auto 0; aspect-ratio: 9 / 16; object-fit: cover; background-color: #000; border-radius: 12px; border: 1px solid #262626"></video>
+  </div>
+</section>
+
+<div class="wrap"><div style="height: 1px; background: #262626"></div></div>
+
+<!-- Horizontal -->
+<section style="padding: 100px 0">
+  <div class="wrap" style="text-align: center">
+    <h3 style="margin: 0; font-size: clamp(34px, 4.5vw, 52px); font-weight: 700; display: inline-flex; align-items: center; gap: 14px">
+      <span style="display: inline-flex; width: 40px; height: 40px; border-radius: 8px; background: #3BF4FB; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M10 9l5 3-5 3z"></path></svg></span>
+      Horizontal
+    </h3>
+    <p style="margin: 24px auto 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #B9B7B0">YouTube, institucional, aftermovie de evento e VSL. Corte mais longo, mesma obsessão por ritmo.</p>
+    <video src="assets/horizontal.mp4" poster="assets/horizontal-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo horizontal: podcast Guia-se Agências Digitais" style="display: block; width: 100%; max-width: 760px; margin: 48px auto 0; aspect-ratio: 16 / 9; object-fit: cover; background-color: #000; border-radius: 8px"></video>
+  </div>
+</section>
+
+<!-- FORMATOS -->
+<section id="formatos" style="padding: 110px 0; border-top: 1px solid #262626">
+  <div class="wrap">
+    <div style="display: flex; flex-wrap: wrap; gap: 20px 48px; justify-content: space-between; align-items: flex-end">
+      <div>
+        <p class="mono" style="margin: 0 0 14px; font-size: 13px; color: #3BF4FB">FORMATOS /</p>
+        <h2 style="margin: 0; font-size: clamp(32px, 4.6vw, 60px); font-weight: 800; line-height: 1.02; letter-spacing: -0.02em">Um corte pra cada tela</h2>
+      </div>
+      <p style="margin: 0; max-width: 360px; font-size: 16px; line-height: 1.6; color: #B9B7B0">Do YouTube ao Reels, cada vídeo sai enquadrado pro lugar onde vai ser visto.</p>
+    </div>
+    <div class="fmt-row">
+      <div class="fmt-item">
+        <div class="fmt-frame" style="aspect-ratio: 16 / 9">
+          <i class="fmt-c fmt-tl" aria-hidden="true"></i><i class="fmt-c fmt-tr" aria-hidden="true"></i><i class="fmt-c fmt-bl" aria-hidden="true"></i><i class="fmt-c fmt-br" aria-hidden="true"></i>
+          <span class="fmt-rec mono" aria-hidden="true"><b></b>REC</span>
+          <video class="fmt-media" src="assets/fmt-h.mp4" poster="assets/fmt-h.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo do chef no formato horizontal"></video>
+        </div>
+        <div class="fmt-meta">
+          <p style="margin: 0; font-size: 17px; font-weight: 700">Horizontal <span class="mono" style="font-size: 12px; font-weight: 400; color: #3BF4FB">16:9</span></p>
+          <p class="mono" style="margin: 6px 0 0; font-size: 11px; line-height: 1.5; color: #A5A39C">YouTube · VSL · institucional</p>
+        </div>
+      </div>
+      <div class="fmt-item">
+        <div class="fmt-frame" style="aspect-ratio: 1 / 1">
+          <i class="fmt-c fmt-tl" aria-hidden="true"></i><i class="fmt-c fmt-tr" aria-hidden="true"></i><i class="fmt-c fmt-bl" aria-hidden="true"></i><i class="fmt-c fmt-br" aria-hidden="true"></i>
+          <span class="fmt-rec mono" aria-hidden="true"><b></b>REC</span>
+          <video class="fmt-media" src="assets/fmt-q.mp4" poster="assets/fmt-q.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo do chef no formato quadrado"></video>
+        </div>
+        <div class="fmt-meta">
+          <p style="margin: 0; font-size: 17px; font-weight: 700">Quadrado <span class="mono" style="font-size: 12px; font-weight: 400; color: #3BF4FB">1:1</span></p>
+          <p class="mono" style="margin: 6px 0 0; font-size: 11px; line-height: 1.5; color: #A5A39C">Feed · anúncios</p>
+        </div>
+      </div>
+      <div class="fmt-item">
+        <div class="fmt-frame" style="aspect-ratio: 4 / 5">
+          <i class="fmt-c fmt-tl" aria-hidden="true"></i><i class="fmt-c fmt-tr" aria-hidden="true"></i><i class="fmt-c fmt-bl" aria-hidden="true"></i><i class="fmt-c fmt-br" aria-hidden="true"></i>
+          <span class="fmt-rec mono" aria-hidden="true"><b></b>REC</span>
+          <video class="fmt-media" src="assets/fmt-c.mp4" poster="assets/fmt-c.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo do chef no formato carrossel"></video>
+        </div>
+        <div class="fmt-meta">
+          <p style="margin: 0; font-size: 17px; font-weight: 700">Carrossel <span class="mono" style="font-size: 12px; font-weight: 400; color: #3BF4FB">4:5</span></p>
+          <p class="mono" style="margin: 6px 0 0; font-size: 11px; line-height: 1.5; color: #A5A39C">Carrossel do Instagram</p>
+        </div>
+      </div>
+      <div class="fmt-item">
+        <div class="fmt-frame" style="aspect-ratio: 9 / 16">
+          <i class="fmt-c fmt-tl" aria-hidden="true"></i><i class="fmt-c fmt-tr" aria-hidden="true"></i><i class="fmt-c fmt-bl" aria-hidden="true"></i><i class="fmt-c fmt-br" aria-hidden="true"></i>
+          <span class="fmt-rec mono" aria-hidden="true"><b></b>REC</span>
+          <video class="fmt-media" src="assets/fmt-v.mp4" poster="assets/fmt-v.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo do chef no formato vertical"></video>
+        </div>
+        <div class="fmt-meta">
+          <p style="margin: 0; font-size: 17px; font-weight: 700">Vertical <span class="mono" style="font-size: 12px; font-weight: 400; color: #3BF4FB">9:16</span></p>
+          <p class="mono" style="margin: 6px 0 0; font-size: 11px; line-height: 1.5; color: #A5A39C">Reels · TikTok · Shorts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LAB IA -->
+<section id="ia" style="background: #111; padding: 120px 0">
+  <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <div style="flex: 1 1 420px">
+      <p class="mono" style="margin: 0 0 16px; font-size: 13px; color: #FF7AB8">02 /</p>
+      <h2 class="glitch" data-text="Lab IA" style="margin: 0; font-size: clamp(40px, 6vw, 80px); font-weight: 800; line-height: 1; letter-spacing: -0.02em">Lab IA</h2>
+    </div>
+    <div style="flex: 1 1 420px; padding-top: 34px">
+      <p style="margin: 0; font-size: 30px; line-height: 1.25">O efeito que faz a pessoa voltar o vídeo pra ver de novo.</p>
+      <p style="margin: 28px 0 0; font-size: 17px; line-height: 1.6; color: #B9B7B0">Uso IA generativa como mágica para seu vídeo, não como muleta: cenários que não existem, transições impossíveis, objetos que somem, produto ganhando vida. Entra quando deixa o vídeo melhor — e sem cara de “vídeo de IA”.</p>
+    </div>
+  </div>
+  <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 72px">
+    <div>
+      <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: #000"><img src="assets/lab-antes.jpg" alt="Antes: fachada com plantas, trepadeiras e postes" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></div>
+      <p style="margin: 16px 0 4px; font-size: 22px; font-weight: 700">Antes</p>
+      <p style="margin: 0; font-size: 15px; color: #B9B7B0">O material bruto, como foi gravado.</p>
+    </div>
+    <div>
+      <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: #000; outline: 2px solid #FF2E88"><img src="assets/lab-depois.jpg" alt="Depois: a mesma fachada limpa, editada com IA" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></div>
+      <p style="margin: 16px 0 4px; font-size: 22px; font-weight: 700">Depois</p>
+      <p style="margin: 0; font-size: 15px; color: #B9B7B0">Plantas, trepadeiras e postes removidos com IA, sem regravar nada.</p>
+    </div>
+    <div>
+      <div style="position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: #000"><video src="assets/uni-real.mp4" poster="assets/uni-real.jpg" autoplay muted loop playsinline preload="auto" aria-label="Experimento: desenho vira pessoa de verdade" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video></div>
+      <p style="margin: 16px 0 4px; font-size: 22px; font-weight: 700">Experimento</p>
+      <p style="margin: 0; font-size: 15px; color: #B9B7B0">Teste autoral — mostra o que é possível pro seu vídeo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- diferenciais -->
+<section style="padding: 100px 0; border-bottom: 1px solid #262626">
+  <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
+    <div>
+      <p style="margin: 0 0 12px; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3BF4FB" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Entrega rápida</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B9B7B0">Primeira versão em até 48h. Você posta enquanto o assunto ainda está quente.</p>
+    </div>
+    <div>
+      <p style="margin: 0 0 12px; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3BF4FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Pronto pra postar</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B9B7B0">Formato certo, legenda, capa e sugestão de texto. Zero trabalho do seu lado.</p>
+    </div>
+    <div>
+      <p style="margin: 0 0 12px; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3BF4FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v6h6"></path><path d="M20 20v-6h-6"></path><path d="M20 10A8 8 0 0 0 6 6L4 10M4 14a8 8 0 0 0 14 4l2-4"></path></svg>Revisões inclusas</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B9B7B0">2 rodadas de ajuste por vídeo, sem cobrança extra.</p>
+    </div>
+    <div>
+      <p style="margin: 0 0 12px; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3BF4FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"></path></svg>IA na medida</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B9B7B0">Efeito impossível quando valoriza, edição limpa quando é o que precisa ser feito.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 PACOTES -->
+<section id="pacotes" style="padding: 120px 0">
+  <div class="wrap">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end">
+      <div>
+        <p class="mono" style="margin: 0 0 16px; font-size: 13px; color: #3BF4FB">03 /</p>
+        <h2 style="margin: 0; font-size: clamp(40px, 6vw, 80px); font-weight: 800; line-height: 1; letter-spacing: -0.02em">Pacotes</h2>
+      </div>
+      <p class="mono" style="margin: 0; font-size: 13px; padding: 10px 14px; border: 1px solid #3BF4FB; color: #3BF4FB; border-radius: 999px">IA GENERATIVA INCLUSA EM TODOS</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 56px">
+      <div style="border: 1px solid #2E2E2E; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+        <p class="mono" style="margin: 0; font-size: 13px; color: #B9B7B0">ARQUIVO_01</p>
+        <p style="margin: 0; font-size: 28px; font-weight: 700">Start</p>
+        <p style="margin: 0; font-size: 40px; font-weight: 800">R$ 800<span style="font-size: 16px; font-weight: 400; color: #B9B7B0"> /mês</span></p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #CFCDC6">4 Reels por mês<br>Edição com IA generativa</p>
+        <a href="https://wa.me/5519992994889?text=Oi%21%20Tenho%20interesse%20no%20pacote%20Start." target="_blank" rel="noopener" class="mono" style="margin-top: auto; text-decoration: none; text-align: center; font-size: 13px; padding: 14px; min-height: 44px; box-sizing: border-box; border-radius: 999px; border: 1.5px solid #F2F0EA">ESCOLHER START</a>
+      </div>
+      <div style="border: 2px solid #3BF4FB; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #141414">
+        <p class="mono" style="margin: 0; font-size: 13px; color: #3BF4FB">ARQUIVO_02 · MAIS ESCOLHIDO</p>
+        <p style="margin: 0; font-size: 28px; font-weight: 700">Responsa</p>
+        <p style="margin: 0; font-size: 40px; font-weight: 800">R$ 1.450<span style="font-size: 16px; font-weight: 400; color: #B9B7B0"> /mês</span></p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #CFCDC6">8 Reels por mês<br>Edição com IA generativa</p>
+        <a href="https://wa.me/5519992994889?text=Oi%21%20Tenho%20interesse%20no%20pacote%20Responsa." target="_blank" rel="noopener" class="mono" style="margin-top: auto; text-decoration: none; text-align: center; font-size: 13px; padding: 14px; min-height: 44px; box-sizing: border-box; border-radius: 999px; background: #3BF4FB; color: #0B0B0B">ESCOLHER RESPONSA</a>
+      </div>
+      <div style="border: 1px solid #2E2E2E; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+        <p class="mono" style="margin: 0; font-size: 13px; color: #B9B7B0">ARQUIVO_03</p>
+        <p style="margin: 0; font-size: 28px; font-weight: 700">Avulso</p>
+        <p style="margin: 0; font-size: 40px; font-weight: 800">R$ 250<span style="font-size: 16px; font-weight: 400; color: #B9B7B0"> /vídeo</span></p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #CFCDC6">1 Reel<br>Edição com IA generativa<br>Ideal pra testar antes do mensal</p>
+        <a href="https://wa.me/5519992994889?text=Oi%21%20Tenho%20interesse%20no%20pacote%20Avulso." target="_blank" rel="noopener" class="mono" style="margin-top: auto; text-decoration: none; text-align: center; font-size: 13px; padding: 14px; min-height: 44px; box-sizing: border-box; border-radius: 999px; border: 1.5px solid #F2F0EA">ESCOLHER AVULSO</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+
+
+<!-- footer -->
+<section id="contato" style="position: relative; overflow: hidden; background: #0B0B0B; padding: 140px 0">
+  <div class="tv-layer tv-static" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none" focusable="false"><filter id="tvstatic" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="2"><animate attributeName="seed" values="1;7;3;9;5;2;8;4;6" dur="0.45s" repeatCount="indefinite"></animate></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix><feComponentTransfer><feFuncR type="linear" slope="1.9" intercept="-0.45"></feFuncR><feFuncG type="linear" slope="1.9" intercept="-0.45"></feFuncG><feFuncB type="linear" slope="1.9" intercept="-0.45"></feFuncB></feComponentTransfer></filter><rect width="100%" height="100%" filter="url(#tvstatic)"></rect></svg></div>
+  <div class="tv-layer tv-lines" aria-hidden="true"></div>
+  <div class="tv-layer tv-tear" aria-hidden="true"></div>
+  <div class="tv-layer tv-roll" aria-hidden="true"></div>
+  <div class="tv-layer tv-vignette" aria-hidden="true"></div>
+  <div class="wrap" style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+    <p class="mono" style="margin: 0; font-size: 13px; color: #FFFFFF; background: #0B0B0B; padding: 6px 10px">RESPONDO NO MESMO DIA</p>
+    <a href="https://wa.me/5519992994889?text=Oi%21%20Bora%20fazer%20meu%20v%C3%ADdeo%3F" target="_blank" rel="noopener" class="cta-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 20px; padding: 18px 44px; min-height: 64px; max-width: 100%; box-sizing: border-box; border-radius: 999px; background: #FFFFFF; color: #0B0B0B; font-size: clamp(22px, 3.4vw, 40px); font-weight: 900; letter-spacing: -0.02em"><span class="cta-text">Bora fazer seu vídeo</span><span class="cta-arrow" aria-hidden="true">→</span></a>
+    <p class="mono" style="margin: 0; font-size: 14px; color: #FFFFFF; background: #0B0B0B; padding: 6px 10px"><a href="https://wa.me/5519992994889?text=Oi%21%20Vim%20pela%20p%C3%A1gina%20da%20Corrupted%20Archives." target="_blank" rel="noopener" style="color: inherit">WhatsApp (19) 99299-4889</a> · <a href="https://instagram.com/corrupted.archives" target="_blank" rel="noopener" style="color: inherit">Instagram @corrupted.archives</a></p>
+  </div>
+</section><footer style="padding: 56px 0 40px">
+  <div class="wrap mono" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 12px; color: #A5A39C">
+    <span style="color: #F2F0EA">CORRUPTED/ARCHIVES</span>
+    <span>REELS · TIKTOK · HORIZONTAL · CAPTAÇÃO · IA</span>
+    <span>CAMPINAS · ATENDO REMOTO</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  function prep(v) { v.muted = true; v.defaultMuted = true; v.playsInline = true; v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); }
+  function play(v) { prep(v); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  vids.forEach(prep);
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) play(e.target); else e.target.pause(); });
+    }, { rootMargin: '200px 0px' });
+    vids.forEach(function (v) { io.observe(v); });
+  } else { vids.forEach(play); }
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) vids.forEach(function (v) { var r = v.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) play(v); });
+  });
+})();
+</script>
+</body>
+</html>
